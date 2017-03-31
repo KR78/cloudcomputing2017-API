@@ -16,19 +16,18 @@ class DatabaseSeeder extends Seeder
 
         $users = array(
                 [
-                'first_name' => 'Student1',
-                'last_name' => 'Student1',
-                'username' => 'Student1', 
-                'email' => 'Student1@gmail.com',
-                'phone_no' => '12345678911',
+                'name' => 'Sample Student',
+                'email' => 'student@gmail.com',
+                'username' => 'student1',
+                'phone_no' => '07454456755',
                 'active' =>'1',
-                'gender'=>'male', 
-                'avatar' =>'',
-                'dob' =>'01012017', 
+                'gender'=>'male',
+                'avatar' =>'https://api.adorable.io/avatars/285/abott@adorable.png',
+                'dob' =>'1994-01-01',
                 'password' => Hash::make('secret')
                 ],
         );
-            
+
         // Loop through each user above and create the record for them in the database
         foreach ($users as $user)
         {

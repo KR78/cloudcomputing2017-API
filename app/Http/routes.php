@@ -20,3 +20,11 @@ Route::group(['prefix' => 'api'], function()
     Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
     Route::post('authenticate', 'AuthenticateController@authenticate');
 });
+
+/*
+Remove the # from the url in AngularJs
+*/
+Route::any('{path?}', function()
+{
+return File::get(public_path().'/index.html');
+})->where("path", ".+");
